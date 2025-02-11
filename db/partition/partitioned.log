@@ -1,46 +1,39 @@
-Creating partitioned table partition-postgresql-partition-1
-/tmp/sql-test/file.MjK.sql
-container name: partition-postgresql-partition-1
+Creating partitioned table
+/tmp/sql-test/file.Pl8.sql
 inserting  spots into 1 for 2024-02-10
+deleting dataset 1
+ERROR:  relation "test_bonus_spot" does not exist
+LINE 1: explain (analyze, costs, buffers) delete from test_bonus_spo...
+                                                      ^
+/tmp/sql-test/file.amV.sql
+inserting  spots into 1 for 2024-02-11
 deleting dataset 1
 [?1049h[22;0;0t[?1h=                                                                                            QUERY PLAN                                                                                              
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------
- Delete on test_bonus_spot  (cost=0.15..16.36 rows=0 width=0) (actual time=0.014..0.015 rows=0 loops=1)
+ Delete on test_bonus_spot  (cost=0.15..16.36 rows=0 width=0) (actual time=0.032..0.041 rows=0 loops=1)
    Delete on test_bonus_spot_2024 test_bonus_spot_1
    Delete on test_bonus_spot_2025 test_bonus_spot_2
-   ->  Append  (cost=0.15..16.36 rows=2 width=10) (actual time=0.013..0.014 rows=0 loops=1)
-         ->  Index Scan using test_bonus_spot_2024_dataset_id_spot_time_idx on test_bonus_spot_2024 test_bonus_spot_1  (cost=0.15..8.17 rows=1 width=10) (actual time=0.007.. 0.007 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
-         ->  Index Scan using test_bonus_spot_2025_dataset_id_spot_time_idx on test_bonus_spot_2025 test_bonus_spot_2  (cost=0.15..8.17 rows=1 width=10) (actual time=0.006.. 0.006 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
- Planning Time: 1.027 ms
- Execution Time: 0.246 ms
-(10 rows)
-:[K[H[2J[H[H[2J[H                                                                                            QUERY PLAN                                                                                              
+   Buffers: shared hit=4
+   ->  Append  (cost=0.15..16.36 rows=2 width=10) (actual time=0.029..0.035 rows=0 loops=1)
+         Buffers: shared hit=4
+         ->  Index Scan using test_bonus_spot_2024_dataset_id_spot_time_idx on test_bonus_spot_2024 test_bonus_spot_1  (cost=0.15..8.17 rows=1 width=10) (actual time=0.007.. 0.008 rows=0 loops=1)
+               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-11'::date) AND ((spot_time)::date <= '2024-02-11'::date))
+               Buffers: shared hit=2
+         ->  Index Scan using test_bonus_spot_2025_dataset_id_spot_time_idx on test_bonus_spot_2025 test_bonus_spot_2  (cost=0.15..8.17 rows=1 width=10) (actual time=0.006.. 0.007 rows=0 loops=1)
+               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-11'::date) AND ((spot_time)::date <= '2024-02-11'::date))
+:[K[K               Buffers: shared hit=2
+:[K[H[2J[H                      
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------
- Delete on test_bonus_spot  (cost=0.15..16.36 rows=0 width=0) (actual time=0.014..0.015 rows=0 loops=1)
+ Delete on test_bonus_spot  (cost=0.15..16.36 rows=0 width=0) (actual time=0.032..0.041 rows=0 loops=1)
    Delete on test_bonus_spot_2024 test_bonus_spot_1
    Delete on test_bonus_spot_2025 test_bonus_spot_2
-   ->  Append  (cost=0.15..16.36 rows=2 width=10) (actual time=0.013..0.014 rows=0 loops=1)
-         ->  Index Scan using test_bonus_spot_2024_dataset_id_spot_time_idx on test_bonus_spot_2024 test_bonus_spot_1  (cost=0.15..8.17 rows=1 width=10) (actual time=0.007.. 0.007 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
-         ->  Index Scan using test_bonus_spot_2025_dataset_id_spot_time_idx on test_bonus_spot_2025 test_bonus_spot_2  (cost=0.15..8.17 rows=1 width=10) (actual time=0.006.. 0.006 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
- Planning Time: 1.027 ms
- Execution Time: 0.246 ms
-(10 rows)
-:[KCancel request sent
-[H[2J[H[H[2J[H                                                                                            QUERY PLAN                                                                                              
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ----------------------
- Delete on test_bonus_spot  (cost=0.15..16.36 rows=0 width=0) (actual time=0.014..0.015 rows=0 loops=1)
-   Delete on test_bonus_spot_2024 test_bonus_spot_1
-   Delete on test_bonus_spot_2025 test_bonus_spot_2
-   ->  Append  (cost=0.15..16.36 rows=2 width=10) (actual time=0.013..0.014 rows=0 loops=1)
-         ->  Index Scan using test_bonus_spot_2024_dataset_id_spot_time_idx on test_bonus_spot_2024 test_bonus_spot_1  (cost=0.15..8.17 rows=1 width=10) (actual time=0.007.. 0.007 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
-         ->  Index Scan using test_bonus_spot_2025_dataset_id_spot_time_idx on test_bonus_spot_2025 test_bonus_spot_2  (cost=0.15..8.17 rows=1 width=10) (actual time=0.006.. 0.006 rows=0 loops=1)
-               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-10'::date) AND ((spot_time)::date <= '2024-02-10'::date))
- Planning Time: 1.027 ms
- Execution Time: 0.246 ms
-(10 rows)
+   Buffers: shared hit=4
+   ->  Append  (cost=0.15..16.36 rows=2 width=10) (actual time=0.029..0.035 rows=0 loops=1)
+         Buffers: shared hit=4
+         ->  Index Scan using test_bonus_spot_2024_dataset_id_spot_time_idx on test_bonus_spot_2024 test_bonus_spot_1  (cost=0.15..8.17 rows=1 width=10) (actual time=0.007.. 0.008 rows=0 loops=1)
+               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-11'::date) AND ((spot_time)::date <= '2024-02-11'::date))
+               Buffers: shared hit=2
+         ->  Index Scan using test_bonus_spot_2025_dataset_id_spot_time_idx on test_bonus_spot_2025 test_bonus_spot_2  (cost=0.15..8.17 rows=1 width=10) (actual time=0.006.. 0.007 rows=0 loops=1)
+               Index Cond: ((dataset_id = 1) AND ((spot_time)::date >= '2024-02-11'::date) AND ((spot_time)::date <= '2024-02-11'::date))
+               Buffers: shared hit=2
 :[KCancel request sent

@@ -6,12 +6,5 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_DB: "postgres"
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:z
-  postgresql-partition:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: "password"
-      POSTGRES_USER: "postgres"
-      POSTGRES_DB: "postgres"
-    volumes:
-      - ./init-partition.sql:/docker-entrypoint-initdb.d/init.sql:z
+      - ./conf/init.sql:/docker-entrypoint-initdb.d/init.sql:z
+      # - ./postgres.conf:/etc/postgresql/postgresql.conf:z

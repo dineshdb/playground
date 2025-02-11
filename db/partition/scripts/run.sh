@@ -1,13 +1,10 @@
 
 # psql -U postgres -d postgres -c "select * from test_bonus_spot ;"
 
-rm -rf /tmp/sql-test
 mkdir -p /tmp/sql-test
 filename=$(mktemp /tmp/sql-test/file.XXX.sql)
 echo $filename
-
-echo "container name: $container_name"
-
+container_name="partition-postgresql-1"
 
 replace_dataset(){
 	dataset_id=$1
@@ -16,7 +13,7 @@ replace_dataset(){
 
 	truncate -s 0 $filename
 
-	echo "explain analyze insert into test_bonus_spot (spot_id, dataset_id, order_line_id, zone, network, spot_time) values " >> $filename
+	echo "explain (analyze, costs, verbose, buffers) insert into test_bonus_spot (spot_id, dataset_id, order_line_id, zone, network, spot_time) values " >> $filename
 
 	for i in {1..50000}
 	do
@@ -41,7 +38,7 @@ drop_dataset(){
 
 	podman exec -it $container_name psql \
 	 -U postgres -d postgres \
-	 -c "explain analyze delete from test_bonus_spot where dataset_id = $dataset_id and "spot_time"::date between '${from}' and '${to}';"
+	 -c "explain (analyze, costs, buffers) delete from test_bonus_spot where dataset_id = $dataset_id and "spot_time"::date between '${from}' and '${to}';"
 }
 
 insert_data_for_datasets(){
