@@ -1,0 +1,41 @@
+setup: down
+	pkgx docker-compose up -d
+
+down:
+	pkgx docker-compose down
+
+
+run:
+	#!/usr/bin/env -S bash -x
+	echo "Creating partitioned table ${container_name}"
+	scripts/run.sh replace 1 2024-02-10
+	scripts/run.sh replace 1 2024-02-11
+	scripts/run.sh replace 1 2024-02-12
+	scripts/run.sh replace 1 2024-02-13
+	scripts/run.sh replace 1 2024-02-14
+	scripts/run.sh replace 1 2024-02-15
+	scripts/run.sh replace 1 2024-02-16
+	scripts/run.sh replace 1 2024-02-17
+	scripts/run.sh replace 1 2024-02-18
+	scripts/run.sh replace 1 2024-02-19
+
+	scripts/run.sh replace 1 2025-02-10
+	scripts/run.sh replace 1 2025-02-11
+	scripts/run.sh replace 1 2025-02-12
+	scripts/run.sh replace 1 2025-02-13
+	scripts/run.sh replace 1 2025-02-14
+	scripts/run.sh replace 1 2025-02-15
+	scripts/run.sh replace 1 2025-02-16
+	scripts/run.sh replace 1 2025-02-17
+	scripts/run.sh replace 1 2025-02-18
+	scripts/run.sh replace 1 2025-02-19
+
+partitioned:
+	container_name='partition-postgresql-partition-1' just run > partitioned.log
+
+non-partitioned: setup
+	container_name='partition-postgresql-1' just run > non-partitioned.log
+
+all: setup partitioned non-partitioned
+
+
