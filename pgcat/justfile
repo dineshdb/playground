@@ -1,0 +1,8 @@
+#/usr/bin/env -S pkgx +docker-compose
+dc:
+	pkgx docker-compose down
+	pkgx docker volume prune -y
+	pkgx docker-compose up -d
+
+test:
+	bash tests.sh

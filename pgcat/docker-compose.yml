@@ -1,0 +1,82 @@
+services:
+  primary:
+    image: postgres:latest
+    container_name: primary
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+      POSTGRESQL_REPLICATION_MODE: master
+      POSTGRESQL_REPLICATION_USER: repl_user
+      POSTGRESQL_REPLICATION_PASSWORD: repl_pass
+    volumes:
+      - ./master/postgres.conf:/etc/postgresql/postgresql.conf:Z
+      - ./master/pg_hba.conf:/etc/postgresql/pg_hba.conf:Z
+      - ./master/init.sql:/docker-entrypoint-initdb.d/init.sql:Z
+    ports:
+      - "5432:5432"
+    command: |
+      postgres
+        -c config_file=/etc/postgresql/postgresql.conf
+    #     -c wal_level=replica
+    #     -c hot_standby=on
+    #     -c max_wal_senders=10
+    #     -c max_replication_slots=10
+    #     -c hot_standby_feedback=on
+
+  replica:
+    image: postgres:latest
+    container_name: replica
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRESQL_REPLICATION_MODE: slave
+      POSTGRESQL_REPLICATION_USER: repl_user
+      POSTGRESQL_REPLICATION_PASSWORD: repl_pass
+      POSTGRESQL_MASTER_HOST: primary
+    depends_on:
+      - primary
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./replica/postgres.conf:/etc/postgresql/postgresql.conf:Z
+      - ./replica/pg_hba.conf:/etc/postgresql/pg_hba.conf:Z
+    command: >
+      bash -c "
+        until pg_isready -h primary -p 5432; do
+          echo waiting for primary;
+          sleep 2;
+        done;
+
+        pg_basebackup -h primary -D /var/lib/postgresql/data -U repl_user -Fp -Xs -P -R;
+        echo 'switching to standby mode'
+        chown -R postgres:postgres /var/lib/postgresql/data
+        chmod 700 /var/lib/postgresql/data
+        su -c 'postgres -c "config_file=/etc/postgresql/postgresql.conf"' postgres
+      "
+  pgcat:
+    image: ghcr.io/postgresml/pgcat:latest
+    container_name: pgcat
+    ports:
+      - "6432:6432"
+    volumes:
+      - ./pgcat.toml:/etc/pgcat/pgcat.toml:Z
+    command: ["pgcat", "/etc/pgcat/pgcat.toml", "--log-level=debug"]
+    depends_on:
+      - primary
+      - replica
+  test:
+    image: docker.io/pkgxdev/pkgx
+    depends_on:
+      - pgcat
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    command: >
+      bash -c "
+        until pkgx pg_isready -h pgcat -p 6432; do
+          echo waiting for pgcat;
+          sleep 2;
+        done;
+        pkgx psql -h pgcat -p 6432 -U postgres -d mydb
+      "

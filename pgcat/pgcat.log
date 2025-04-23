@@ -1,0 +1,172 @@
+[2m2025-04-23T20:01:42.376760Z[0m [32m INFO[0m ThreadId(01) [2mpgcat[0m[2m:[0m Welcome to PgCat! Meow. (Version 1.2.0)    
+[2m2025-04-23T20:01:42.379222Z[0m [32m INFO[0m ThreadId(01) [2mpgcat[0m[2m:[0m Running on 0.0.0.0:6432    
+[2m2025-04-23T20:01:42.379233Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Config path: /etc/pgcat/pgcat.toml    
+[2m2025-04-23T20:01:42.379237Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Ban time: 60s    
+[2m2025-04-23T20:01:42.379240Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Idle client in transaction timeout: 0ms    
+[2m2025-04-23T20:01:42.379243Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Worker threads: 4    
+[2m2025-04-23T20:01:42.379246Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Healthcheck timeout: 1000ms    
+[2m2025-04-23T20:01:42.379248Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Connection timeout: 1000ms    
+[2m2025-04-23T20:01:42.379251Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Idle timeout: 600000ms    
+[2m2025-04-23T20:01:42.379253Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Log client connections: false    
+[2m2025-04-23T20:01:42.379256Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Log client disconnections: false    
+[2m2025-04-23T20:01:42.379258Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Shutdown timeout: 60000ms    
+[2m2025-04-23T20:01:42.379261Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Healthcheck delay: 30000ms    
+[2m2025-04-23T20:01:42.379263Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Default max server lifetime: 3600000ms    
+[2m2025-04-23T20:01:42.379266Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Server round robin: true    
+[2m2025-04-23T20:01:42.379268Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m TLS support is disabled    
+[2m2025-04-23T20:01:42.379271Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Server TLS enabled: false    
+[2m2025-04-23T20:01:42.379273Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Server TLS certificate verification: false    
+[2m2025-04-23T20:01:42.379276Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m Plugins: not configured    
+[2m2025-04-23T20:01:42.379279Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Maximum user connections: 9    
+[2m2025-04-23T20:01:42.379283Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Default pool mode: transaction    
+[2m2025-04-23T20:01:42.379285Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Load Balancing mode: Random    
+[2m2025-04-23T20:01:42.379288Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Connection timeout: 1000ms    
+[2m2025-04-23T20:01:42.379290Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Idle timeout: 600000ms    
+[2m2025-04-23T20:01:42.379293Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Sharding function: pg_bigint_hash    
+[2m2025-04-23T20:01:42.379296Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Primary reads: false    
+[2m2025-04-23T20:01:42.379298Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Query router: true    
+[2m2025-04-23T20:01:42.379301Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Query parser max length: None    
+[2m2025-04-23T20:01:42.379303Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Infer role from query: true    
+[2m2025-04-23T20:01:42.379306Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Number of shards: 1    
+[2m2025-04-23T20:01:42.379308Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Number of users: 1    
+[2m2025-04-23T20:01:42.379311Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Max server lifetime: default    
+[2m2025-04-23T20:01:42.379313Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Cleanup server connections: true    
+[2m2025-04-23T20:01:42.379316Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Log client parameter status changes: false    
+[2m2025-04-23T20:01:42.379318Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Prepared statements server cache size: 0    
+[2m2025-04-23T20:01:42.379321Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb] Plugins: not configured    
+[2m2025-04-23T20:01:42.379323Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Pool size: 9    
+[2m2025-04-23T20:01:42.379326Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Minimum pool size: 0    
+[2m2025-04-23T20:01:42.379328Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Statement timeout: 0    
+[2m2025-04-23T20:01:42.379333Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Pool mode: transaction    
+[2m2025-04-23T20:01:42.379337Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Max server lifetime: default    
+[2m2025-04-23T20:01:42.379339Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Connection timeout: not set    
+[2m2025-04-23T20:01:42.379342Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::config[0m[2m:[0m [pool: mydb][user: postgres] Idle timeout: not set    
+[2m2025-04-23T20:01:42.379636Z[0m [32m INFO[0m ThreadId(01) [2mpgcat::pool[0m[2m:[0m [pool: mydb][user: postgres] creating new pool    
+[2m2025-04-23T20:01:42.379658Z[0m [34mDEBUG[0m ThreadId(01) [2mpgcat::pool[0m[2m:[0m [pool: mydb][user: postgres] Pool reaper rate: 30000ms    
+[2m2025-04-23T20:01:42.379684Z[0m [34mDEBUG[0m ThreadId(01) [2mpgcat::pool[0m[2m:[0m [pool: mydb][user: postgres] Pool reaper rate: 30000ms    
+[2m2025-04-23T20:01:42.379721Z[0m [32m INFO[0m ThreadId(01) [2mpgcat[0m[2m:[0m Config autoreloader: disabled    
+[2m2025-04-23T20:01:42.379743Z[0m [32m INFO[0m ThreadId(01) [2mpgcat[0m[2m:[0m Waiting for clients    
+[2m2025-04-23T20:01:42.379798Z[0m [32m INFO[0m ThreadId(05) [2mpgcat::stats[0m[2m:[0m Events reporter started    
+[2m2025-04-23T20:01:42.380054Z[0m [32m INFO[0m ThreadId(05) [2mpgcat::pool[0m[2m:[0m Creating a new server connection Address { id: 0, host: "replica", port: 5432, shard: 0, database: "mydb", role: Replica, replica_number: 0, address_index: 0, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:42.380072Z[0m [32m INFO[0m ThreadId(06) [2mpgcat::pool[0m[2m:[0m Creating a new server connection Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.828996Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Password authentication successful    
+[2m2025-04-23T20:01:48.829344Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43520 connected (plain)    
+[2m2025-04-23T20:01:48.829654Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Regular query, not a command    
+[2m2025-04-23T20:01:48.829661Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.829665Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Query: 'SELECT 1;'    
+[2m2025-04-23T20:01:48.829676Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m Parsing sql 'SELECT 1;'...    
+[2m2025-04-23T20:01:48.829795Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.829811Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Value(Number("1", false))    
+[2m2025-04-23T20:01:48.829827Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: SemiColon, location: Location { line: 1, column: 9 } }    
+[2m2025-04-23T20:01:48.829833Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: ; 1: EOF 2: EOF    
+[2m2025-04-23T20:01:48.829838Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.829864Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Inferring role    
+[2m2025-04-23T20:01:48.829870Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Waiting for connection from pool    
+[2m2025-04-23T20:01:48.829875Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::pool[0m[2m:[0m Address { id: 0, host: "replica", port: 5432, shard: 0, database: "mydb", role: Replica, replica_number: 0, address_index: 0, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 } is ok    
+[2m2025-04-23T20:01:48.829904Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Got connection from pool    
+[2m2025-04-23T20:01:48.829909Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43520 talking to server Address { id: 0, host: "replica", port: 5432, shard: 0, database: "mydb", role: Replica, replica_number: 0, address_index: 0, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 26, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 26, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.829924Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Running `SET application_name TO 'psql';` on server Address { id: 0, host: "replica", port: 5432, shard: 0, database: "mydb", role: Replica, replica_number: 0, address_index: 0, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 26, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 26, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.830184Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server connection marked for clean up    
+[2m2025-04-23T20:01:48.830200Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.830210Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending query to server    
+[2m2025-04-23T20:01:48.830218Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending Q to server    
+[2m2025-04-23T20:01:48.830495Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.830502Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Releasing server back into the pool    
+[2m2025-04-23T20:01:48.830505Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.830657Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client disconnecting    
+[2m2025-04-23T20:01:48.830722Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat[0m[2m:[0m Client 10.89.0.10:43520 disconnected, session duration: 0d 00:00:00.003    
+[2m2025-04-23T20:01:48.849216Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Password authentication successful    
+[2m2025-04-23T20:01:48.849262Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43526 connected (plain)    
+[2m2025-04-23T20:01:48.849554Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Regular query, not a command    
+[2m2025-04-23T20:01:48.849560Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.849563Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Query: 'UPDATE test_table SET x = x + 1;'    
+[2m2025-04-23T20:01:48.849566Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m Parsing sql 'UPDATE test_table SET x = x + 1;'...    
+[2m2025-04-23T20:01:48.849590Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.849597Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Identifier(Ident { value: "x", quote_style: None })    
+[2m2025-04-23T20:01:48.849609Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: Plus, location: Location { line: 1, column: 29 } }    
+[2m2025-04-23T20:01:48.849612Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: + 1: 1 2: ;    
+[2m2025-04-23T20:01:48.849616Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 30    
+[2m2025-04-23T20:01:48.849618Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.849623Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Value(Number("1", false))    
+[2m2025-04-23T20:01:48.849626Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: SemiColon, location: Location { line: 1, column: 32 } }    
+[2m2025-04-23T20:01:48.849628Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: ; 1: EOF 2: EOF    
+[2m2025-04-23T20:01:48.849631Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.849633Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: SemiColon, location: Location { line: 1, column: 32 } }    
+[2m2025-04-23T20:01:48.849635Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: ; 1: EOF 2: EOF    
+[2m2025-04-23T20:01:48.849637Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.849641Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Inferring role    
+[2m2025-04-23T20:01:48.849645Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Waiting for connection from pool    
+[2m2025-04-23T20:01:48.849648Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::pool[0m[2m:[0m Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 } is ok    
+[2m2025-04-23T20:01:48.849662Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Got connection from pool    
+[2m2025-04-23T20:01:48.849665Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43526 talking to server Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 11, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 11, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.849674Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Running `SET application_name TO 'psql';` on server Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 11, errors: 0 }, current: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 11, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.849898Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server connection marked for clean up    
+[2m2025-04-23T20:01:48.849909Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.849914Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending query to server    
+[2m2025-04-23T20:01:48.849916Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending Q to server    
+[2m2025-04-23T20:01:48.852598Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.852611Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Releasing server back into the pool    
+[2m2025-04-23T20:01:48.852616Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.852828Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client disconnecting    
+[2m2025-04-23T20:01:48.852926Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat[0m[2m:[0m Client 10.89.0.10:43526 disconnected, session duration: 0d 00:00:00.004    
+[2m2025-04-23T20:01:48.870386Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Password authentication successful    
+[2m2025-04-23T20:01:48.870432Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43538 connected (plain)    
+[2m2025-04-23T20:01:48.870617Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Regular query, not a command    
+[2m2025-04-23T20:01:48.870622Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.870625Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Query: 'SELECT x FROM test_table; UPDATE test_table SET x = x + 2;'    
+[2m2025-04-23T20:01:48.870628Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m Parsing sql 'SELECT x FROM test_table; UPDATE test_table SET x = x + 2;'...    
+[2m2025-04-23T20:01:48.870649Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.870656Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Identifier(Ident { value: "x", quote_style: None })    
+[2m2025-04-23T20:01:48.870661Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: Word(Word { value: "FROM", quote_style: None, keyword: FROM }), location: Location { line: 1, column: 10 } }    
+[2m2025-04-23T20:01:48.870665Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: FROM 1: test_table 2: ;    
+[2m2025-04-23T20:01:48.870668Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.870693Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.870699Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Identifier(Ident { value: "x", quote_style: None })    
+[2m2025-04-23T20:01:48.870701Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: Plus, location: Location { line: 1, column: 55 } }    
+[2m2025-04-23T20:01:48.870704Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: + 1: 2 2: ;    
+[2m2025-04-23T20:01:48.870706Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 30    
+[2m2025-04-23T20:01:48.870709Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.870713Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Value(Number("2", false))    
+[2m2025-04-23T20:01:48.870717Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: SemiColon, location: Location { line: 1, column: 58 } }    
+[2m2025-04-23T20:01:48.870719Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: ; 1: EOF 2: EOF    
+[2m2025-04-23T20:01:48.870721Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.870724Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: SemiColon, location: Location { line: 1, column: 58 } }    
+[2m2025-04-23T20:01:48.870726Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: ; 1: EOF 2: EOF    
+[2m2025-04-23T20:01:48.870728Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.870732Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Inferring role    
+[2m2025-04-23T20:01:48.870736Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Waiting for connection from pool    
+[2m2025-04-23T20:01:48.870739Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::pool[0m[2m:[0m Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 1, query_count: 1, bytes_received: 62, bytes_sent: 75, xact_time: 0, query_time: 2, wait_time: 11, errors: 0 }, current: AddressStatFields { xact_count: 1, query_count: 1, bytes_received: 62, bytes_sent: 75, xact_time: 0, query_time: 2, wait_time: 11, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 } is ok    
+[2m2025-04-23T20:01:48.870752Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Got connection from pool    
+[2m2025-04-23T20:01:48.870755Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43538 talking to server Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 1, query_count: 1, bytes_received: 62, bytes_sent: 75, xact_time: 0, query_time: 2, wait_time: 22, errors: 0 }, current: AddressStatFields { xact_count: 1, query_count: 1, bytes_received: 62, bytes_sent: 75, xact_time: 0, query_time: 2, wait_time: 22, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.870806Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.870814Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending query to server    
+[2m2025-04-23T20:01:48.870816Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending Q to server    
+[2m2025-04-23T20:01:48.873035Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.873045Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Releasing server back into the pool    
+[2m2025-04-23T20:01:48.873048Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.873236Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client disconnecting    
+[2m2025-04-23T20:01:48.873303Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat[0m[2m:[0m Client 10.89.0.10:43538 disconnected, session duration: 0d 00:00:00.004    
+[2m2025-04-23T20:01:48.890405Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Password authentication successful    
+[2m2025-04-23T20:01:48.890454Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43554 connected (plain)    
+[2m2025-04-23T20:01:48.890612Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Regular query, not a command    
+[2m2025-04-23T20:01:48.890618Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.890621Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Query: 'BEGIN; SELECT x FROM test_table; COMMIT;'    
+[2m2025-04-23T20:01:48.890624Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m Parsing sql 'BEGIN; SELECT x FROM test_table; COMMIT;'...    
+[2m2025-04-23T20:01:48.890649Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m parsing expr    
+[2m2025-04-23T20:01:48.890656Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m prefix: Identifier(Ident { value: "x", quote_style: None })    
+[2m2025-04-23T20:01:48.890660Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m get_next_precedence() TokenWithLocation { token: Word(Word { value: "FROM", quote_style: None, keyword: FROM }), location: Location { line: 1, column: 17 } }    
+[2m2025-04-23T20:01:48.890665Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m 0: FROM 1: test_table 2: ;    
+[2m2025-04-23T20:01:48.890670Z[0m [34mDEBUG[0m ThreadId(07) [2msqlparser::parser[0m[2m:[0m next precedence: 0    
+[2m2025-04-23T20:01:48.890683Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Inferring role    
+[2m2025-04-23T20:01:48.890687Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Waiting for connection from pool    
+[2m2025-04-23T20:01:48.890690Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::pool[0m[2m:[0m Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 2, query_count: 2, bytes_received: 136, bytes_sent: 139, xact_time: 0, query_time: 4, wait_time: 22, errors: 0 }, current: AddressStatFields { xact_count: 2, query_count: 2, bytes_received: 136, bytes_sent: 139, xact_time: 0, query_time: 4, wait_time: 22, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 } is ok    
+[2m2025-04-23T20:01:48.890704Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Got connection from pool    
+[2m2025-04-23T20:01:48.890706Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client 10.89.0.10:43554 talking to server Address { id: 1, host: "primary", port: 5432, shard: 0, database: "mydb", role: Primary, replica_number: 1, address_index: 1, username: "postgres", pool_name: "mydb", mirrors: [], stats: AddressStats { total: AddressStatFields { xact_count: 2, query_count: 2, bytes_received: 136, bytes_sent: 139, xact_time: 0, query_time: 4, wait_time: 33, errors: 0 }, current: AddressStatFields { xact_count: 2, query_count: 2, bytes_received: 136, bytes_sent: 139, xact_time: 0, query_time: 4, wait_time: 33, errors: 0 }, averages: AddressStatFields { xact_count: 0, query_count: 0, bytes_received: 0, bytes_sent: 0, xact_time: 0, query_time: 0, wait_time: 0, errors: 0 }, averages_updated: false }, error_count: 0 }    
+[2m2025-04-23T20:01:48.890715Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::query_router[0m[2m:[0m Using pool settings, query_parser_enabled: true    
+[2m2025-04-23T20:01:48.890721Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending query to server    
+[2m2025-04-23T20:01:48.890723Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Sending Q to server    
+[2m2025-04-23T20:01:48.890973Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.890979Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Releasing server back into the pool    
+[2m2025-04-23T20:01:48.890982Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::server[0m[2m:[0m Server in transaction: false    
+[2m2025-04-23T20:01:48.891098Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat::client[0m[2m:[0m Client disconnecting    
+[2m2025-04-23T20:01:48.891140Z[0m [34mDEBUG[0m ThreadId(07) [2mpgcat[0m[2m:[0m Client 10.89.0.10:43554 disconnected, session duration: 0d 00:00:00.001    

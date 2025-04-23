@@ -1,0 +1,39 @@
+# https://github.com/postgresml/pgcat/blob/main/examples/docker/pgcat.toml
+
+[general]
+host = "0.0.0.0"
+port = 6432
+admin_username = "repl_user"
+admin_password = "repl_pass"
+
+[users.postgre]
+password = "password"
+
+[pools.mydb]
+user = "postgres"
+password = "password"
+# Pool mode (see PgBouncer docs for more).
+# session: one server connection per connected client
+# transaction: one server connection per client transaction
+pool_mode = "transaction"
+
+# any: round-robin between primary and replicas,
+# replica: round-robin between replicas only without touching the primary,
+# primary: all queries go to the primary unless otherwise specified.
+default_role = "replica"
+
+query_parser_enabled = true
+query_parser_read_write_splitting = true
+primary_reads_enabled = false
+primary_reads = false
+
+# Credentials for users that may connect to this cluster
+[pools.mydb.users.0]
+username = "postgres"
+password = "password"
+pool_size = 9
+
+[pools.mydb.shards.0]
+# [ host, port, role ]
+servers = [["replica", 5432, "replica"], ["primary", 5432, "primary"]]
+database = "mydb"
